@@ -11,6 +11,15 @@ const GET_CARS = gql`
 			Generation
 			Year_Introduced
 			Modification_Engine
+			Doors
+			Power
+			Maximum_Speed
+			Acceleration
+			Carroserie
+			Seats
+			Engine_Position
+			Displacement
+			Torque
 		}
 	}
 `;
@@ -40,11 +49,13 @@ const List = ({ search }) => {
 					{car.Brand} {car.Model}
 				</b>
 				<ul>
-					{Object.entries(car).map(([key, value]) => (
-						<li>
-							<b>{key}:</b> {value}
-						</li>
-					))}
+					{Object.entries(car)
+						.filter(([key]) => !key.includes('__'))
+						.map(([key, value]) => (
+							<li>
+								<b>{key}:</b> {value}
+							</li>
+						))}
 				</ul>
 			</div>
 		))
