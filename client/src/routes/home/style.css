@@ -1,0 +1,46 @@
+.home {
+	margin: 2rem;
+	margin-top: 4rem;
+}
+
+.homeLoading {
+	width: 100vw;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.homeInputContainer {
+	margin-top: 4rem;
+}
+
+.homeInput {
+	width: 100%;
+	margin: 0.25rem 0;
+	padding: 1rem;
+	border: 1px #ccc solid;
+	border-radius: 0.25rem;
+}
+
+.homeInputLabel {
+	font-size: medium;
+	font-weight: 600;
+	margin-right: 0.5rem;
+}
+
+.homeList {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1rem 0;
+	padding: 0;
+}
+
+.homeListItem {
+	list-style-type: none;
+	padding: 1rem;
+	border: 2px #ccc solid;
+	margin: 0.25rem;
+	width: calc(20% - 0.5rem);
+	border-radius: 0.5rem;
+}

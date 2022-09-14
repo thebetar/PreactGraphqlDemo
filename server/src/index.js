@@ -37,10 +37,12 @@ const server = new ApolloServer({
 	resolvers,
 	csrfPrevention: true,
 	cache: 'bounded',
-	context: {
-		models: {
-			CarModel
-		}
+	dataSources: () => {
+		return {
+			models: {
+				CarModel
+			}
+		};
 	}
 });
 

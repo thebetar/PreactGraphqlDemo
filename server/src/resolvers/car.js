@@ -1,16 +1,18 @@
-const mongoose = require('mongoose');
+const CarModel = require('../models/car');
 
 /**
  *
  * @param {any} parent
  * @param {*} arguments
  * @param {{
- *   models: {
- *       CarModel: mongoose.Model
+ *   dataSources: {
+ *       models: {
+ * 			CarModel: CarModel
+ * 		}
  *   }
  * }} context
  * @returns
  */
-module.exports = async (_, {}, { models }) => {
-	return await models.CarModel.find();
+module.exports = async (_, {}, { dataSources }) => {
+	return await dataSources.models.CarModel.find();
 };
